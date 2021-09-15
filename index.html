@@ -13,22 +13,28 @@
     />
   </head>
   <body>
+    <!------------- top section ------------>
     <header>
       <nav class="nav-bar">
+        <!-- left navbar -->
         <div class="logo">
           <img
             src="https://uploads-ssl.webflow.com/6097e0eca1e87557da031fef/609859a191abe5d64b17fed3_Patika%20logo-p-500.png"
             alt="patika-logo"
           />
         </div>
+
+        <!-- mid navbar -->
         <div class="search-bar">
           <div class="sb-width-fixer">
-            <input type="text" placeholder="Filter" />
+            <input type="text" placeholder="Filter Search" />
             <a href="">
               <i class="fas fa-search"></i>
             </a>
           </div>
         </div>
+
+        <!-- right navbar -->
         <div class="profile-icon">
           <a href="">
             <i class="fas fa-users"></i>
@@ -36,5 +42,31 @@
         </div>
       </nav>
     </header>
+
+    <!------------- bottom section ----------->
   </body>
+
+  <div class="bottom-container">
+    <div class="toggle-container">
+      <a href="#" id="form-view">Form</a>
+      <a href="#" id="card-view">Cards</a>
+    </div>
+    <div class="form-container">
+      <div class="fc-width-fixer">
+        <h2>Please Fill in Your Form</h2>  
+        <form method="get" id="formElement">
+            <label for="name">Name</label>
+          <input type="text" id="name" name="name" required/>
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+        </form>
+      </div>
+    </div>
+    <div>
+      <div></div>
+    </div>
+  </div>
 </html>

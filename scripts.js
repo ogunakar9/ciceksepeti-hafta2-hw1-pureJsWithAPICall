@@ -6,15 +6,17 @@ let cardContent = document.querySelector(".card-content");
 let bottomContainer = document.querySelector(".bottom-container");
 let filterInput = document.querySelector(".text-filter");
 let searchBar = document.querySelector(".search-bar");
+let formSubmitBtn = document.querySelector(".form-submitBtn");
+let formElements = document.querySelector("#formElement").elements;
 
 formViewer.addEventListener("click", showForm);
 cardViewer.addEventListener("click", showCards);
 filterInput.addEventListener("input", updateItems);
+formSubmitBtn.addEventListener("click", createModal);
 
 function showCards() {
   formContainer.style.display = "none";
   cardContainer.style.display = "flex";
-  cardContainer.style.flex = "4";
   searchBar.style.display = "flex";
 }
 
@@ -72,7 +74,7 @@ function loadItems(data) {
   }
 }
 
-//TODO: fix cardgrid changing on filter
+//TODO: fix cardgrid size changing on filter
 
 function updateItems() {
   let inputQuery = filterInput.value.toLowerCase();
@@ -94,4 +96,12 @@ function showForm() {
     cardContainer.style.display = "none";
     formContainer.style.display = "flex";
     searchBar.style.display = "none";
+    //TODO: should i reset the search query on focus change to form
+}
+
+function createModal(e) {
+    e.preventDefault();
+    for(let i = 0; i < formElements.length - 1; i++) {
+        console.log(formElements[i].name, formElements[i].value);
+    }
 }

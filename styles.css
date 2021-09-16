@@ -131,6 +131,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 /*-------TOGGLER------*/
@@ -173,6 +174,8 @@
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
+  display: none;
+  background-color: #ffc05f;
 }
 
 .form-container .fc-width-fixer {
@@ -195,7 +198,12 @@
 
 /*--------CARDS--------*/
 .card-container {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
 }
 
 .card-content {

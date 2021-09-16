@@ -58,7 +58,8 @@ $insideCard-tone: #e9e2d3;
       border-radius: 5px;
       outline: none;
       background-color: whitesmoke;
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background-color: rgb(255, 255, 255);
       }
     }
@@ -90,6 +91,7 @@ $insideCard-tone: #e9e2d3;
   display: flex;
   justify-content: space-between;
   margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 /*-------TOGGLER------*/
@@ -109,25 +111,29 @@ $insideCard-tone: #e9e2d3;
   @include flex-center;
   flex-flow: column wrap;
   flex: 4;
+  display: none;
+  background-color: $yellow-tone;
   
 
   .fc-width-fixer {
     width: 80%;
 
-    h2 {
-      text-align: center;
-    }
-    form {
-      display: flex;
-      flex-flow: column wrap;
-    }
+  h2 {
+    text-align: center;
+  }
+  form {
+    display: flex;
+    flex-flow: column wrap;
+  }
   }
 }
 
 /*--------CARDS--------*/
 .card-container {
-  display: none;
+  display: flex;
+  flex: 4;
 }
+
 .card-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -175,4 +181,3 @@ $insideCard-tone: #e9e2d3;
     }
   }
 }
-

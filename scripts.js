@@ -1,24 +1,34 @@
 let formViewer = document.querySelector("#form-view");
 let cardViewer = document.querySelector("#card-view");
 let cardContainer = document.querySelector(".card-container");
+let formContainer = document.querySelector(".form-container");
 let cardContent = document.querySelector(".card-content");
 let bottomContainer = document.querySelector(".bottom-container");
 let filterInput = document.querySelector(".text-filter");
+let searchBar = document.querySelector(".search-bar");
 
-// formViewer.addEventListener("click", showForm);
-cardViewer.addEventListener("click", () => fetchItems());
+formViewer.addEventListener("click", showForm);
+cardViewer.addEventListener("click", showCards);
 filterInput.addEventListener("input", updateItems);
+
+function showCards() {
+  formContainer.style.display = "none";
+  cardContainer.style.display = "flex";
+  cardContainer.style.flex = "4";
+  searchBar.style.display = "flex";
+}
 
 let dataArr = [];
 
-function fetchItems() {
-  fetch("https://jsonplaceholder.typicode.com/posts")
-    .then((res) => res.json())
-    .then((data) => {
-      dataArr = data;
-      loadItems(data);
-    });
-}
+
+//TODO: should i keep fetch like this or assign a function and put in showcards or standalone call
+
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then((res) => res.json())
+  .then((data) => {
+    dataArr = data;
+    loadItems(data);
+  });
 
 function loadItems(data) {
   let cardCount = 0;
@@ -62,6 +72,8 @@ function loadItems(data) {
   }
 }
 
+//TODO: fix cardgrid changing on filter
+
 function updateItems() {
   let inputQuery = filterInput.value.toLowerCase();
 
@@ -74,4 +86,12 @@ function updateItems() {
   cardContainer.innerHTML = "";
   cardContent.innerHTML = "";
   loadItems(updatedItems);
+}
+
+/*---------------------FORM RELATED-----------------*/
+
+function showForm() {
+    cardContainer.style.display = "none";
+    formContainer.style.display = "flex";
+    searchBar.style.display = "none";
 }

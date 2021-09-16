@@ -80,7 +80,7 @@
   background-color: whitesmoke;
 }
 
-.search-bar .sb-width-fixer input:hover {
+.search-bar .sb-width-fixer input:hover, .search-bar .sb-width-fixer input:focus {
   background-color: white;
 }
 
@@ -194,6 +194,10 @@
 }
 
 /*--------CARDS--------*/
+.card-container {
+  display: none;
+}
+
 .card-content {
   display: -ms-grid;
   display: grid;

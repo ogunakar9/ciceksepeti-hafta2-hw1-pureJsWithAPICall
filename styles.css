@@ -133,6 +133,7 @@
   margin-top: 3%;
 }
 
+/*-------TOGGLER------*/
 .toggle-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,6 +152,7 @@
   margin-top: 3rem;
 }
 
+/*--------FORM--------*/
 .form-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,5 +191,65 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
+}
+
+/*--------CARDS--------*/
+.card-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  background-color: #ffc05f;
+  padding: 2rem;
+  grid-gap: 1rem;
+  border-radius: 1rem;
+}
+
+.card {
+  background-color: #e9e2d3;
+  padding: 2rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 4px 7px 7px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 7px 7px rgba(0, 0, 0, 0.5);
+}
+
+.card .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  background-color: #e9e2d3;
+}
+
+.card .image img {
+  width: 100%;
+  border-radius: 1em;
+  background-color: #e9e2d3;
+}
+
+.card .title-container {
+  background-color: #e9e2d3;
+  text-align: center;
+}
+
+.card .title-container p {
+  margin-top: 0;
+  background-color: #e9e2d3;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+}
+
+.card .desc-container p {
+  text-align: justify;
+  background-color: #e9e2d3;
 }
 /*# sourceMappingURL=styles.css.map */

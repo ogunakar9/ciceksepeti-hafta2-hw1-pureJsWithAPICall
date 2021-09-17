@@ -44,42 +44,50 @@
       </nav>
     </header>
 
-    <!------------- bottom section ----------->
-  </body>
-
-  <div class="bottom-container">
-    <div class="toggle-container">
-      <button id="form-view">Form</a>
-      <button id="card-view">Cards</a>
+    <!-- modal -->
+    <div class="modal-container">
+      <a href="#" class="fa fa-close" id="closeModal"></a>
+      <div class="modal-content"></div>  
     </div>
-    <div class="form-container">
-      <div class="fc-width-fixer">
-      <h2>Please Fill In Your Form</h2>
-      <form method="get" id="formElement">
-        <label for="bootcamp">Bootcamp:</label>
-        <input id="bootcamp" name="Bootcamp" type="text" />
-        <label for="fname">First Name:</label>
-        <input id="fname" name="First Name" type="text" />
-        <label for="lname">Last Name:</label>
-        <input id="lname" name="Last Name" type="text" />
-        <label for="email">Email Address:</label>
-        <input id="email" name="Email Address" type="email" />
-        <label for="title">Title:</label>
-        <input id="title" name="Title" type="text" />
-        <label for="phone">Phone:</label>
-        <input id="phone" name="Phone" type="text" />
-        <label>Please tell us what you think about our bootcamp:
-          <textarea name="" id="comments" ></textarea>
-         </label>
-        <button class="form-submitBtn">Submit</button>
-      </form>
+
+    <!------------- bottom section ----------->
+    <div class="bottom-container">
+
+      <!-- toggle between card and form -->
+      <div class="toggle-container">
+        <button id="form-view">Form</a>
+        <button id="card-view">Cards</a>
+      </div>
+
+      <!-- form section -->
+      <div class="form-container">
+        <div class="fc-width-fixer">
+        <h2>Please Fill In Your Form</h2>
+        <form method="get" id="formElement">
+          <label for="bootcamp">Bootcamp:</label>
+          <input id="bootcamp" name="Bootcamp" type="text" />
+          <label for="fname">First Name:</label>
+          <input id="fname" name="First Name" type="text" />
+          <label for="lname">Last Name:</label>
+          <input id="lname" name="Last Name" type="text" />
+          <label for="email">Email Address:</label>
+          <input id="email" name="Email Address" type="email" />
+          <label for="title">Title:</label>
+          <input id="title" name="Title" type="text" />
+          <label for="phone">Phone:</label>
+          <input id="phone" name="Phone" type="text" />
+          <label>Please tell us what you think about our bootcamp:
+            <textarea name="" id="comments" ></textarea>
+           </label>
+          <button class="form-submitBtn">Submit</button>
+        </form>
+        </div>
+      </div>
+
+      <!-- card section later filled in script -->
+      <div class="card-container">
+        <div class="card-content"></div>
       </div>
     </div>
-    <div class="card-container">
-      <!-- <div>
-        <h2>View Items</h2>
-      </div> -->
-      <div class="card-content"></div>
-    </div>
-  </div>
+  </body>
 </html>

@@ -91,6 +91,35 @@ body {
   }
 }
 
+/*-------------------------------MODAL-----------------------------*/
+.modal-container {
+  display: none;
+  width: 50%;
+  height: 60%;
+  background-color: $blue-tone;
+  z-index: 10;
+  position: fixed;
+  top: 15%;
+  left: 25%;
+  border-radius: 1rem;
+  padding: 1rem;
+  a {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-decoration: none;
+    color: $blue-tone;
+  }
+  .modal-content {
+    position: relative;
+    p {
+      color: $blue-tone;
+      padding: 1rem;
+      margin: 1rem;
+    }
+  }
+}
+
 /*---------------------------BOTTOM SECTION -----------------------*/
 
 .bottom-container {
@@ -268,7 +297,6 @@ body {
     }
   }
 }
-
 
 //for screens below 1100px - minor toggler readjustment
 @media screen and(max-width:1100px) {

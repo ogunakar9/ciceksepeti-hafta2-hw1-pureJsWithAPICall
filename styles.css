@@ -125,6 +125,38 @@ body {
   color: #444aff;
 }
 
+/*-------------------------------MODAL-----------------------------*/
+.modal-container {
+  display: none;
+  width: 50%;
+  height: 60%;
+  background-color: #444aff;
+  z-index: 10;
+  position: fixed;
+  top: 15%;
+  left: 25%;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.modal-container a {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  text-decoration: none;
+  color: #444aff;
+}
+
+.modal-container .modal-content {
+  position: relative;
+}
+
+.modal-container .modal-content p {
+  color: #444aff;
+  padding: 1rem;
+  margin: 1rem;
+}
+
 /*---------------------------BOTTOM SECTION -----------------------*/
 .bottom-container {
   padding-left: 4%;

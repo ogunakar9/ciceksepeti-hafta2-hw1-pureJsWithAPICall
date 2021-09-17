@@ -10,6 +10,7 @@ const filterInput = document.querySelector(".text-filter");
 const searchBar = document.querySelector(".search-bar");
 const formSubmitBtn = document.querySelector(".form-submitBtn");
 const formElements = document.querySelector("#formElement").elements;
+const modalContainer = document.querySelector(".modal-container");
 
 formViewer.addEventListener("click", showForm);
 cardViewer.addEventListener("click", showCards);
@@ -102,4 +103,6 @@ function createModal(e) {
     for(let i = 0; i < formElements.length - 1; i++) {
         console.log(formElements[i].name, formElements[i].value);
     }
+
+    modalContainer.style.display = "flex";
 }

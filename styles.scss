@@ -178,11 +178,16 @@ body {
         border: 2px solid $blue-tone;
         border-radius: 0.3rem;
         height: 2rem;
+        outline: none;
 
         &:focus,
         &:hover {
           background-color: rgb(255, 255, 255);
         }
+      }
+
+      textarea {
+        height: 10rem;
       }
 
       button {
@@ -260,6 +265,39 @@ body {
     p {
       text-align: justify;
       background-color: $insideCard-tone;
+    }
+  }
+}
+
+
+//for screens below 1100px - minor toggler readjustment
+@media screen and(max-width:1100px) {
+  .toggle-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    justify-content: space-between;
+
+    button {
+      width: 47%;
+    }
+  }
+
+  .bottom-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-container {
+    width: auto;
+    margin: 0;
+  }
+
+  .search-bar {
+    .sb-width-fixer {
+      width: 95%;
     }
   }
 }

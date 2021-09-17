@@ -1,5 +1,4 @@
 //querySelector references
-
 const formViewer = document.querySelector("#form-view");
 const cardViewer = document.querySelector("#card-view");
 const cardContainer = document.querySelector(".card-container");
@@ -41,7 +40,7 @@ fetch("https://jsonplaceholder.typicode.com/posts")
   });
 
 
-//load items based on either entire data arr or filtered data arr
+//load items based on either entire data arr or filtered data arr, fill cardContent
 function loadItems(data) {
   let cardCount = 0;
 

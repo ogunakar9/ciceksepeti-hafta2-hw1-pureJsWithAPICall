@@ -18,12 +18,11 @@ function showCards() {
   formContainer.style.display = "none";
   cardContainer.style.display = "flex";
   searchBar.style.display = "flex";
+  filterInput.value = "";
+  updateItems();
 }
 
 let dataArr = [];
-
-
-//TODO: should i keep fetch like this or assign a function and put in showcards or standalone call
 
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then((res) => res.json())
@@ -74,8 +73,6 @@ function loadItems(data) {
   }
 }
 
-//TODO: fix cardgrid size changing on filter
-
 function updateItems() {
   let inputQuery = filterInput.value.toLowerCase();
 
@@ -96,7 +93,6 @@ function showForm() {
     cardContainer.style.display = "none";
     formContainer.style.display = "flex";
     searchBar.style.display = "none";
-    //TODO: should i reset the search query on focus change to form
 }
 
 function createModal(e) {

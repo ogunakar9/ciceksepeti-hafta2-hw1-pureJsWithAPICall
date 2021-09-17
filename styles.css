@@ -1,5 +1,7 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
   background-color: #f8f0df;
+  font-family: "Roboto", sans-serif;
 }
 
 /*---------------------------TOP SECTION----------------------*/
@@ -146,11 +148,32 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin-right: 1rem;
 }
 
-.toggle-container a {
+.toggle-container button {
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   margin-top: 3rem;
+  background-color: #ffc05f;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #444aff;
+  -webkit-box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 350ms all;
+  transition: 350ms all;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444aff;
+}
+
+.toggle-container button:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 /*--------FORM--------*/
@@ -215,6 +238,8 @@
   padding: 2rem;
   grid-gap: 1rem;
   border-radius: 1rem;
+  -webkit-box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .card {
@@ -223,6 +248,16 @@
   border-radius: 1rem;
   -webkit-box-shadow: 4px 7px 7px rgba(0, 0, 0, 0.5);
           box-shadow: 4px 7px 7px rgba(0, 0, 0, 0.5);
+  border: 2px solid #444aff;
+  -webkit-transition: 200ms all;
+  transition: 200ms all;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 .card .image {
@@ -239,13 +274,11 @@
       -ms-flex: 1;
           flex: 1;
   width: 100%;
-  background-color: #e9e2d3;
 }
 
 .card .image img {
   width: 100%;
   border-radius: 1em;
-  background-color: #e9e2d3;
 }
 
 .card .title-container {

@@ -1,11 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 $blue-tone: #444aff;
 $yellow-tone: #ffc05f;
 $bg-tone: #f8f0df;
 $card-tone: #f0f0cb;
 $pink-tone: #f7dad9;
 $insideCard-tone: #e9e2d3;
-* {
+
+body {
   background-color: $bg-tone;
+  font-family: "Roboto", sans-serif;
 }
 
 @mixin flex-center {
@@ -99,10 +103,27 @@ $insideCard-tone: #e9e2d3;
   display: flex;
   flex-direction: column;
   flex: 1;
+  margin-right: 1rem;
 
-  a {
+  button {
+    text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
     margin-top: 3rem;
+    background-color: $yellow-tone;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid $blue-tone;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.5);
+    transition: 350ms all;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $blue-tone;
+
+    &:hover {
+      box-shadow: 0 5px 10px rgba(0,0,0, 0.5);
+      transform:translateY(-3px);
+    }
   }
 }
 
@@ -113,18 +134,17 @@ $insideCard-tone: #e9e2d3;
   flex: 4;
   display: none;
   background-color: $yellow-tone;
-  
 
   .fc-width-fixer {
     width: 80%;
 
-  h2 {
-    text-align: center;
-  }
-  form {
-    display: flex;
-    flex-flow: column wrap;
-  }
+    h2 {
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-flow: column wrap;
+    }
   }
 }
 
@@ -141,6 +161,7 @@ $insideCard-tone: #e9e2d3;
   padding: 2rem;
   grid-gap: 1rem;
   border-radius: 1rem;
+  box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .card {
@@ -148,18 +169,21 @@ $insideCard-tone: #e9e2d3;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 4px 7px 7px rgba(0, 0, 0, 0.5);
+  border: 2px solid $blue-tone;
+  transition: 200ms all;
 
-  //TODO: why have to write bg color over and over
+  &:hover {
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.5);
+    transform:translateY(-3px);
+  }
 
   .image {
     @include flex-center;
     width: 100%;
-    background-color: $insideCard-tone;
 
     img {
       width: 100%;
       border-radius: 1em;
-      background-color: $insideCard-tone;
     }
   }
 

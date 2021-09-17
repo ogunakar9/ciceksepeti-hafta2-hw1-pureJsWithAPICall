@@ -128,13 +128,13 @@ body {
 /*-------------------------------MODAL-----------------------------*/
 .modal-container {
   display: none;
-  width: 50%;
-  height: 60%;
   background-color: #444aff;
   z-index: 10;
   position: fixed;
-  top: 15%;
-  left: 25%;
+  width: 30%;
+  left: 35%;
+  height: auto;
+  overflow: auto;
   border-radius: 1rem;
   padding: 1rem;
 }
@@ -144,15 +144,12 @@ body {
   top: 1rem;
   right: 1rem;
   text-decoration: none;
-  color: #444aff;
-}
-
-.modal-container .modal-content {
-  position: relative;
+  color: #ffc05f;
+  font-size: 2rem;
 }
 
 .modal-container .modal-content p {
-  color: #444aff;
+  color: #ffc05f;
   padding: 1rem;
   margin: 1rem;
 }
@@ -436,6 +433,11 @@ body {
   }
   .search-bar .sb-width-fixer {
     width: 95%;
+  }
+  .modal-container {
+    width: 80%;
+    left: 10%;
+    padding: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */

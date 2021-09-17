@@ -1,4 +1,4 @@
-//TODO: letleri consta cevir ve scopeta tanimla
+//querySelector references
 
 const formViewer = document.querySelector("#form-view");
 const cardViewer = document.querySelector("#card-view");
@@ -9,14 +9,18 @@ const bottomContainer = document.querySelector(".bottom-container");
 const filterInput = document.querySelector(".text-filter");
 const searchBar = document.querySelector(".search-bar");
 const formSubmitBtn = document.querySelector(".form-submitBtn");
-const formElements = document.querySelector("#formElement").elements;
 const modalContainer = document.querySelector(".modal-container");
+const modalContent = document.querySelector(".modal-content");
+const closeModalBtn = document.querySelector("#closeModal");
 
+//eventListeners
 formViewer.addEventListener("click", showForm);
 cardViewer.addEventListener("click", showCards);
 filterInput.addEventListener("input", updateItems);
 formSubmitBtn.addEventListener("click", createModal);
+closeModalBtn.addEventListener("click", closeModal);
 
+//runs when cards are toggled
 function showCards() {
   formContainer.style.display = "none";
   cardContainer.style.display = "flex";
@@ -27,6 +31,8 @@ function showCards() {
 
 let dataArr = [];
 
+
+//card data fetch
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then((res) => res.json())
   .then((data) => {
@@ -34,6 +40,8 @@ fetch("https://jsonplaceholder.typicode.com/posts")
     loadItems(data);
   });
 
+
+//load items based on either entire data arr or filtered data arr
 function loadItems(data) {
   let cardCount = 0;
 
@@ -76,6 +84,7 @@ function loadItems(data) {
   }
 }
 
+//filter data arr and load filtered cards
 function updateItems() {
   let inputQuery = filterInput.value.toLowerCase();
 
@@ -92,17 +101,41 @@ function updateItems() {
 
 /*---------------------FORM RELATED-----------------*/
 
+//runs when form is toggled
 function showForm() {
-    cardContainer.style.display = "none";
-    formContainer.style.display = "flex";
-    searchBar.style.display = "none";
+  cardContainer.style.display = "none";
+  formContainer.style.display = "flex";
+  searchBar.style.display = "none";
 }
 
+
+//creates modal upon form submission
 function createModal(e) {
-    e.preventDefault();
-    for(let i = 0; i < formElements.length - 1; i++) {
-        console.log(formElements[i].name, formElements[i].value);
+  e.preventDefault();
+  formSubmitBtn.disabled = true;
+  const formElements = document.querySelector("#formElement").elements;
+
+  for (let i = 0; i < formElements.length - 1; i++) {
+    const modalParagraph = document.createElement("p");
+
+    if (formElements[i].id === "comments") {
+      modalParagraph.innerHTML = `My comments: ${formElements[i].value}`;
+    } else {
+      modalParagraph.innerHTML = `${formElements[i].name}: ${formElements[i].value}`;
     }
 
-    modalContainer.style.display = "flex";
+    modalContent.appendChild(modalParagraph);
+    modalContainer.appendChild(modalContent);
+
+    formElements[i].value = "";
+  }
+
+  modalContainer.style.display = "flex";
+}
+
+//closes modal and cleans up modal innerhtml
+function closeModal() {
+  formSubmitBtn.disabled = false;
+  modalContent.innerHTML = "";
+  modalContainer.style.display = "none";
 }

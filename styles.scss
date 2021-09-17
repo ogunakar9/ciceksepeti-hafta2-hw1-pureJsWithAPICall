@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+//colors
+
 $blue-tone: #444aff;
 $yellow-tone: #ffc05f;
 $bg-tone: #f8f0df;
@@ -92,28 +94,31 @@ body {
 }
 
 /*-------------------------------MODAL-----------------------------*/
+
 .modal-container {
   display: none;
-  width: 50%;
-  height: 60%;
   background-color: $blue-tone;
   z-index: 10;
   position: fixed;
-  top: 15%;
-  left: 25%;
+  width: 30%;
+  left: 35%;
+  height: auto;
+  overflow: auto;
   border-radius: 1rem;
   padding: 1rem;
+
   a {
     position: absolute;
     top: 1rem;
     right: 1rem;
     text-decoration: none;
-    color: $blue-tone;
+    color: $yellow-tone;
+    font-size: 2rem;
   }
+
   .modal-content {
-    position: relative;
     p {
-      color: $blue-tone;
+      color: $yellow-tone;
       padding: 1rem;
       margin: 1rem;
     }
@@ -131,6 +136,7 @@ body {
 }
 
 /*-------TOGGLER------*/
+
 .toggle-container {
   display: flex;
   flex-direction: column;
@@ -161,6 +167,7 @@ body {
 }
 
 /*--------FORM--------*/
+
 .form-container {
   @include flex-center;
   flex-flow: column wrap;
@@ -241,6 +248,7 @@ body {
 }
 
 /*--------CARDS--------*/
+
 .card-container {
   display: flex;
   flex: 4;
@@ -298,7 +306,8 @@ body {
   }
 }
 
-//for screens below 1100px - minor toggler readjustment
+//for screens below 1100px - minor width fixes for small screens
+
 @media screen and(max-width:1100px) {
   .toggle-container {
     display: flex;
@@ -327,5 +336,11 @@ body {
     .sb-width-fixer {
       width: 95%;
     }
+  }
+
+  .modal-container {
+    width: 80%;
+    left: 10%;
+    padding: 0;
   }
 }

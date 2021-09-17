@@ -1,13 +1,15 @@
-let formViewer = document.querySelector("#form-view");
-let cardViewer = document.querySelector("#card-view");
-let cardContainer = document.querySelector(".card-container");
-let formContainer = document.querySelector(".form-container");
-let cardContent = document.querySelector(".card-content");
-let bottomContainer = document.querySelector(".bottom-container");
-let filterInput = document.querySelector(".text-filter");
-let searchBar = document.querySelector(".search-bar");
-let formSubmitBtn = document.querySelector(".form-submitBtn");
-let formElements = document.querySelector("#formElement").elements;
+//TODO: letleri consta cevir ve scopeta tanimla
+
+const formViewer = document.querySelector("#form-view");
+const cardViewer = document.querySelector("#card-view");
+const cardContainer = document.querySelector(".card-container");
+const formContainer = document.querySelector(".form-container");
+const cardContent = document.querySelector(".card-content");
+const bottomContainer = document.querySelector(".bottom-container");
+const filterInput = document.querySelector(".text-filter");
+const searchBar = document.querySelector(".search-bar");
+const formSubmitBtn = document.querySelector(".form-submitBtn");
+const formElements = document.querySelector("#formElement").elements;
 
 formViewer.addEventListener("click", showForm);
 cardViewer.addEventListener("click", showCards);
@@ -35,25 +37,25 @@ function loadItems(data) {
   let cardCount = 0;
 
   for (let i = 0; i < data.length; i++) {
-    let card = document.createElement("div");
+    const card = document.createElement("div");
     card.className = "card";
 
-    let image = document.createElement("div");
+    const image = document.createElement("div");
     image.className = "image";
 
-    let img = document.createElement("img");
+    const img = document.createElement("img");
     img.src = "./images/ciceksepeti.png";
 
-    let titleContainer = document.createElement("div");
+    const titleContainer = document.createElement("div");
     titleContainer.className = "title-container";
 
-    let pTitle = document.createElement("p");
+    const pTitle = document.createElement("p");
     pTitle.innerHTML = data[i].title;
 
-    let descContainer = document.createElement("div");
+    const descContainer = document.createElement("div");
     descContainer.className = "desc-container";
 
-    let pDescription = document.createElement("p");
+    const pDescription = document.createElement("p");
     pDescription.innerHTML = data[i].body;
 
     descContainer.appendChild(pDescription);

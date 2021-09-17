@@ -203,6 +203,10 @@ body {
           flex: 4;
   display: none;
   background-color: #ffc05f;
+  border-radius: 1rem;
+  -webkit-box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
 }
 
 .form-container .fc-width-fixer {
@@ -211,6 +215,11 @@ body {
 
 .form-container .fc-width-fixer h2 {
   text-align: center;
+  color: #444aff;
+  border-radius: 0.3rem;
+  border: 2px solid #444aff;
+  background-color: #f8f0df;
+  padding: 1rem;
 }
 
 .form-container .fc-width-fixer form {
@@ -221,6 +230,60 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
+}
+
+.form-container .fc-width-fixer form textarea {
+  width: 100%;
+  height: 15rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form-container .fc-width-fixer form label {
+  margin-top: 1rem;
+  color: #444aff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.form-container .fc-width-fixer form input,
+.form-container .fc-width-fixer form textarea,
+.form-container .fc-width-fixer form button {
+  background-color: #f8f0df;
+  border: 2px solid #444aff;
+  border-radius: 0.3rem;
+  height: 2rem;
+}
+
+.form-container .fc-width-fixer form input:focus, .form-container .fc-width-fixer form input:hover,
+.form-container .fc-width-fixer form textarea:focus,
+.form-container .fc-width-fixer form textarea:hover,
+.form-container .fc-width-fixer form button:focus,
+.form-container .fc-width-fixer form button:hover {
+  background-color: white;
+}
+
+.form-container .fc-width-fixer form button {
+  -webkit-box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 3rem;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #444aff;
+  -webkit-transition: 200ms all;
+  transition: 200ms all;
+}
+
+.form-container .fc-width-fixer form button:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  cursor: pointer;
 }
 
 /*--------CARDS--------*/

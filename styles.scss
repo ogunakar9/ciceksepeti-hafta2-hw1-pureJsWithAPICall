@@ -7,9 +7,12 @@ $card-tone: #f0f0cb;
 $pink-tone: #f7dad9;
 $insideCard-tone: #e9e2d3;
 
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   background-color: $bg-tone;
-  font-family: "Roboto", sans-serif;
 }
 
 @mixin flex-center {
@@ -123,6 +126,7 @@ body {
     &:hover {
       box-shadow: 0 5px 10px rgba(0,0,0, 0.5);
       transform:translateY(-3px);
+      cursor: pointer;
     }
   }
 }

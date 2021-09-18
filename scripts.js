@@ -85,9 +85,9 @@ function loadItems(data) {
 
 //filter data arr and load filtered cards
 function updateItems() {
-  let inputQuery = filterInput.value.toLowerCase();
+  const inputQuery = filterInput.value.toLowerCase();
 
-  let updatedItems = dataArr.filter(
+  const updatedItems = dataArr.filter(
     (data) =>
       data.title.toLowerCase().includes(inputQuery) ||
       data.body.toLowerCase().includes(inputQuery)

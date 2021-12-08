@@ -5,7 +5,7 @@
 * Vanilla Js API Call
 * Filter Data and Display
 
-For live demo [CLICK HERE ](https://ogunakar9.github.io/ciceksepeti-hw1-ogunakar-pureJsWithAPICall/)
+For live demo [CLICK HERE ](https://ogunakar9.github.io/ciceksepeti-hafta2-hw1-pureJsWithAPICall/)
 
 ![image](./images/cards.jpg)
 ![image](./images/form.jpg)
